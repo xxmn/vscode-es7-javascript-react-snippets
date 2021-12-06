@@ -86,14 +86,64 @@
     "body": ["for(let ${1:item} in ${2:object}) {", "\t${0}", "}", ""],
     "description": "Iterating over property values of iterable objects"
   },
-  "anonymousFunction": {
-    "prefix": "anfn",
+  "anonymousFunctionWithParams": {
+    "prefix": "afnp",
     "body": ["(${1:params}) => {", "\t${2}", "}"],
     "description": "Creates an anonymous function in ES7 syntax"
   },
-  "namedFunction": {
-    "prefix": "nfn",
+  "anonymousFunction": {
+    "prefix": "afn",
+    "body": ["() => {", "\t${1}", "}"],
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "alignItemsCenter": {
+    "prefix": "alc",
+    "body": "alignItems: 'center',",
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "justifyContentCenter": {
+    "prefix": "jc",
+    "body": "justifyContent: 'center',",
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "flexDirectionRow": {
+    "prefix": "fr",
+    "body": "flexDirection: 'row',",
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "flex1": {
+    "prefix": "fl",
+    "body": "flex: 1,",
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "styleInElement": {
+    "prefix": "s",
+    "body": ["style={{", "\t${1}", "}}"],
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "backgroundColor": {
+    "prefix": "bg",
+    "body": ["backgroundColor: '", "\t${1}", "',"],
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "constNamedFunctionWithParams": {
+    "prefix": "cfnp",
     "body": ["const ${1:name} = (${2:params}) => {", "\t${3}", "}", ""],
+    "description": "Creates a named function in ES7 syntax"
+  },
+  "constNamedFunction": {
+    "prefix": "cfn",
+    "body": ["const ${1:name} = () => {", "\t${2}", "}", ""],
+    "description": "Creates a named function in ES7 syntax"
+  },
+  "namedFunction": {
+    "prefix": "fn",
+    "body": ["${1:name} = () => {", "\t${2}", "}", ""],
+    "description": "Creates a named function in ES7 syntax"
+  },
+  "namedFunctionWithParams": {
+    "prefix": "fnp",
+    "body": ["${1:name} = (${2:params}) => {", "\t${3}", "}", ""],
     "description": "Creates a named function in ES7 syntax"
   },
   "destructingObject": {
@@ -842,7 +892,7 @@
     "description": "Forward ref statement used inside component"
   },
   "componentSetStateObject": {
-    "prefix": "sst",
+    "prefix": "tss",
     "body": "this.setState({$0})",
     "description": "Performs a shallow merge of nextState into current state"
   },
@@ -857,7 +907,7 @@
     "description": "Access component's props"
   },
   "componentState": {
-    "prefix": "state",
+    "prefix": "ts",
     "body": "this.state.$0"
   },
   "bindThis": {
